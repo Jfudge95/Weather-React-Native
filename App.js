@@ -43,7 +43,7 @@ export default function App() {
         lng: location.coords.longitude,
       });
     } else {
-      setCoordinates({ lat: "48.85", lng: "2.35" });
+      setCoordinates({ lat: "40.7128", lng: "74.0060" });
     }
   }
 
@@ -55,7 +55,7 @@ export default function App() {
     >
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
-          {isFontLoaded && <Home />}
+          {isFontLoaded && weather && <Home weather={weather} />}
         </SafeAreaView>
       </SafeAreaProvider>
     </ImageBackground>
