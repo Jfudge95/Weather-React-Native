@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { s } from "./Home.style";
-import { Txt } from "../../components/Txt/Txt.jsx";
+import { Txt } from "../../components/Txt/Txt";
 import { MeteoBasic } from "../../components/MeteoBasic/MeteoBasic";
 import { getWeatherInterpretation } from "../../utils/meteo-utils";
 export function Home({ weather }) {
