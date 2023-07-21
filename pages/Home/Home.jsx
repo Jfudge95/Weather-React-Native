@@ -4,6 +4,7 @@ import { Txt } from "../../components/Txt/Txt";
 import { MeteoBasic } from "../../components/MeteoBasic/MeteoBasic";
 import { getWeatherInterpretation } from "../../utils/meteo-utils";
 import { MeteoAdvanced } from "../../components/MeteoAdvanced/MeteoAdvanced";
+
 export function Home({ weather, city }) {
   const currentWeather = weather.current_weather;
   const currentInterpretation = getWeatherInterpretation(
@@ -13,6 +14,7 @@ export function Home({ weather, city }) {
     <>
       <View style={s.meteo_basic}>
         <MeteoBasic
+          dailyWeather={weather.daily}
           city={city}
           interpretation={currentInterpretation}
           temperature={Math.round(currentWeather.temperature * (9 / 5) + 32)}
